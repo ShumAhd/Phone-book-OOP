@@ -7,11 +7,9 @@ class Contact {
   private String description;
   private String status;
 
-  // Описываю конструтор
+
   public Contact(ContactBuilder contactBuilder){
-    // Для меня обязательны два поля - это firstName и phoneNumber
-    // поэтому в конструкторе будет проверка на инициалицаю этих
-    // полей.
+
     if(contactBuilder == null){
       throw new IllegalArgumentException("Пожалуйста воспользуйтесь конструктором ContactBuilder для создания объекта конструктора");
     }
@@ -72,7 +70,7 @@ class Contact {
 
     return builder.toString();
   }
-  //Описываю вложенный класс ContactBuilder+
+
   public static class ContactBuilder{
     protected String firstName;
     protected String lastName;
